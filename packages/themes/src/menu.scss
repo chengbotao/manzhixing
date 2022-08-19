@@ -1,0 +1,139 @@
+// config
+@use "variables";
+
+.xy-menu {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  list-style: none;
+  border: variables.$menu-border-width solid variables.$menu-border-color;
+  box-shadow: variables.$menu-box-shadow;
+  > .xy-menu-item {
+    padding: variables.$menu-item-padding-y variables.$menu-item-padding-x;
+    cursor: pointer;
+    transition: variables.$menu-transition;
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+    &.is-disabled {
+      color: variables.$menu-item-disabled-color;
+      pointer-events: none;
+    }
+    &.is-active,
+    &:hover {
+      color: variables.$menu-item-active-color;
+      border-bottom: variables.$menu-item-active-border-width solid
+        variables.$menu-item-active-color;
+    }
+  }
+  .xy-submenu {
+    position: relative;
+    white-space: nowrap;
+    padding: variables.$menu-item-padding-y variables.$menu-item-padding-x;
+    cursor: pointer;
+    transition: variables.$menu-transition;
+    .xy-submenu-title {
+      display: flex;
+      align-items: center;
+      padding: variables.$menu-item-padding-y 0;
+      .arrow-icon {
+        margin-left: 3px;
+        transition: transform 0.25s ease-in-out;
+      }
+    }
+    &:hover,
+    &:focus {
+      .arrow-icon {
+        transform: rotate(180deg);
+      }
+    }
+    &.is-disabled {
+      color: variables.$menu-item-disabled-color;
+      pointer-events: none;
+    }
+  }
+  .is-vertical {
+    .arrow-icon {
+      transform: rotate(0deg) !important;
+    }
+  }
+  .is-vertical.is-opened {
+    .arrow-icon {
+      transform: rotate(180deg) !important;
+    }
+  }
+  .xy-submenu-items {
+    padding-left: 0;
+    list-style: none;
+    white-space: nowrap;
+    .xy-menu-item {
+      padding: variables.$menu-item-padding-y variables.$menu-item-padding-x;
+      cursor: pointer;
+      transition: variables.$menu-transition;
+      color: variables.$body-color;
+      &.is-active,
+      &:hover {
+        color: variables.$menu-item-active-color !important;
+      }
+      &.is-disabled {
+        color: variables.$menu-item-disabled-color;
+        pointer-events: none;
+      }
+    }
+  }
+}
+
+.xy-menu-horizontal {
+  .xy-submenu,
+  .xy-menu-item {
+    border-bottom: variables.$menu-item-active-border-width solid transparent;
+    &.is-active,
+    &:hover {
+      color: variables.$menu-item-active-color;
+      border-bottom: variables.$menu-item-active-border-width solid
+        variables.$menu-item-active-color;
+    }
+  }
+  .xy-submenu {
+    &:hover,
+    &:focus {
+      .arrow-icon {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  .xy-submenu-items {
+    position: absolute;
+    top: calc(100% + 2px);
+    left: 0;
+    right: 0;
+    z-index: 5;
+    background: variables.$white;
+    border: variables.$menu-border-width solid variables.$menu-border-color;
+    box-shadow: variables.$menu-box-shadow;
+  }
+}
+.xy-menu-vertical {
+  flex-direction: column;
+  border-bottom: 0;
+  border-right: variables.$menu-border-width solid variables.$menu-border-color;
+  .xy-submenu,
+  .xy-menu-item {
+    border-left: variables.$menu-item-active-border-width solid transparent;
+    &.is-active,
+    &:hover {
+      color: variables.$menu-item-active-color;
+      border-left: variables.$menu-item-active-border-width solid variables.$menu-item-active-color;
+    }
+  }
+  .xy-submenu-items {
+    .xy-menu-item {
+      border-left: variables.$menu-item-active-border-width solid transparent;
+      &.is-active,
+      &:hover {
+        color: variables.$menu-item-active-color;
+      }
+    }
+  }
+}

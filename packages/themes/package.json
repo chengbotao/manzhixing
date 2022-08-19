@@ -1,0 +1,38 @@
+{
+  "name": "@botaoxy/themes",
+  "version": "1.0.0",
+  "description": "vue3xy&reactxy 主题样式",
+  "main": "dist/index.css",
+  "style": "dist/index.css",
+  "scripts": {
+    "build": "npx gulp"
+  },
+  "keywords": [
+    "style",
+    "css",
+    "scss"
+  ],
+  "repository": "git@github.com:chengbotao/botaoxy.git",
+  "bugs": {
+    "url": "https://github.com/chengbotao/botaoxy/issues",
+    "email": "chengbotao5221@163.com"
+  },
+  "author": "chengbotao <chengbotao5221@163.com>",
+  "contributors": [
+    {
+      "name": "chengbotao",
+      "email": "chengbotao5221@163.com",
+      "url": "https://chengbotao.github.io/chengbotao/"
+    }
+  ],
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^9.0.0",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.69.5"
+  }
+}

@@ -1,0 +1,20 @@
+// config
+@use "variables";
+
+.xy-dragger {
+  background: variables.$gray-100;
+  border: 1px dashed variables.$gray-300;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 20px;
+  width: 360px;
+  height: 180px;
+  text-align: center;
+  &:hover {
+    border: 1px dashed variables.$primary;
+  }
+  &.is-dragover {
+    border: 2px dashed variables.$primary;
+    background: rgba(variables.$primary, 0.2);
+  }
+}

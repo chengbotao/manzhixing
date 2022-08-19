@@ -1,0 +1,122 @@
+
+:root {
+  --vp-c-brand-secondary: #647eff;
+}
+/* .VPHome {
+  padding-bottom: 5px !important;
+} */
+
+.VPHome .VPHero.VPHomeHero .container .main .name .clip {
+  background: linear-gradient(to right , var(--vp-c-brand) , var(--vp-c-brand-secondary));
+  background-size: 200% 200%;
+  animation: clip 16s infinite;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes clip {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes bg-slide {
+  0% {
+    background-position: 0 90%;
+  }
+  50% {
+    background-position: 90% 0%;
+  }
+  100% {
+    background-position: 0% 90%;
+  }
+}
+
+.VPHome .VPHero.VPHomeHero .container .actions .action .VPButton.brand,
+.VPHome .VPHero.VPHomeHero .container .actions .action .VPButton.alt {
+  font-size: 16px;
+  display: inline-block;
+  border-radius: 8px;
+  position: relative;
+  font-weight: 600;
+}
+
+.VPHome .VPHero.VPHomeHero .container .actions .action .VPButton.brand {
+  background-image: radial-gradient(closest-side,var(--vp-c-brand) 6%,var(--vp-c-brand-secondary) 50%,var(--vp-c-brand) 100%);
+  background-size: 200% 600%;
+  background-color: transparent;
+  border: none;
+  animation: bg-slide 16s infinite;
+}
+
+.VPHome .VPHero.VPHomeHero .container .actions .action .VPButton.brand {
+  transition: background-color 0.5s, color 0.5s;
+  background-color: var(--vp-c-green);
+  color: #fff;
+}
+
+.dark .VPHome .VPHero.VPHomeHero .container .actions .action .VPButton.brand {
+  color: var(--vp-c-bg-alt);
+}
+.VPHome .VPHero.VPHomeHero .container .actions .action .VPButton.alt {
+  color: #000;
+}
+.dark .VPHome .VPHero.VPHomeHero .container .actions .action .VPButton.alt {
+  color: #fff;
+}
+
+
+.VPHome .VPHero.VPHomeHero .container .actions .action .VPButton.brand:hover {
+  background-color: var(--vp-c-green-dark);
+  transition-duration: 0.2s;
+}
+.dark .VPHome .VPHero.VPHomeHero .container .actions .action .VPButton.brand:hover {
+  background-color: var(--vp-c-green-light);
+}
+
+.VPImage.image-src {
+  border-radius: 21px;
+}
+
+.vp-doc._vue3xy_examples_autoComplete ul,
+.vp-doc._vue3xy_examples_menu ul,
+.vp-doc._vue3xy_examples_upload ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* docs:dev */
+.vp-doc._examples_autoComplete ul,
+.vp-doc._examples_menu ul,
+.vp-doc._examples_upload ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* 设置滚动条的样式 */
+::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;
+}
+/* 滚动槽 */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+/* 滚动条滑块 */
+::-webkit-scrollbar-thumb {
+  cursor: pointer;
+  border-radius: 3px;
+  background-color: hsla(220, 4%, 58%, 0.3);
+}
+::-webkit-scrollbar-thumb:window-inactive {
+  background-color: hsla(220, 4%, 58%, 0.3);
+}

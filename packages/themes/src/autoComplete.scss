@@ -1,0 +1,38 @@
+// config
+@use "variables";
+
+.xy-auto-complete {
+    position: relative;
+  }
+  .xy-suggestion-list {
+    list-style:none;
+    padding-left: 0;
+    white-space: nowrap;
+    position: absolute;
+    background: variables.$white;
+    z-index: 100;
+    top: calc(100% + 8px);
+    left: 0;
+    border: variables.$menu-border-width solid variables.$menu-border-color;
+    box-shadow: variables.$submenu-box-shadow;
+    width: 100%;
+    .xy-suggestions-loading-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 75px;
+    }
+    .xy-suggestion-item {
+      padding: variables.$menu-item-padding-y variables.$menu-item-padding-x;
+      cursor: pointer;
+      transition: variables.$menu-transition;
+      color: variables.$body-color;
+      &.is-active {
+        background: variables.$menu-item-active-color !important;
+        color: variables.$white !important;
+      }
+      &:hover {
+        color: variables.$menu-item-active-color !important;
+      }
+    }
+  }

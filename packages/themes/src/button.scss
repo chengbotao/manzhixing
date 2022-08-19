@@ -1,0 +1,93 @@
+// config
+@use "variables";
+
+// mixins
+@use "mixins";
+
+
+.xy-button {
+    position: relative;
+    display: inline-block;
+    font-weight: variables.$btn-font-weight;
+    line-height: variables.$btn-line-height;
+    color: variables.$body-color;
+    white-space: nowrap;
+    text-align: center;
+    vertical-align: middle;
+    background-image: none;
+    border: variables.$btn-border-width solid transparent;
+    @include mixins.button-size(
+      variables.$btn-padding-y,
+      variables.$btn-padding-x,
+      variables.$btn-font-size,
+      variables.$btn-border-radius
+    );
+    box-shadow: variables.$btn-box-shadow;
+    cursor: pointer;
+    transition: variables.$btn-transition;
+    &.disabled,
+    &[disabled] {
+      cursor: not-allowed;
+      opacity: variables.$btn-disabled-opacity;
+      box-sizing: none;
+      > * {
+        pointer-events: none; // 不接受鼠标事件
+      }
+    }
+  }
+
+  .xy-button-lg {
+    @include mixins.button-size(
+      variables.$btn-padding-y-lg,
+      variables.$btn-padding-x-lg,
+      variables.$btn-font-size-lg,
+      variables.$btn-border-radius-lg
+    );
+  }
+
+  .xy-button-sm {
+    @include mixins.button-size(
+      variables.$btn-padding-y-sm,
+      variables.$btn-padding-x-sm,
+      variables.$btn-font-size-sm,
+      variables.$btn-border-radius-sm
+    );
+  }
+
+  .xy-button-primary {
+    @include mixins.button-style(variables.$primary, variables.$primary, variables.$white);
+  }
+  .xy-button-danger {
+    @include mixins.button-style(variables.$danger, variables.$danger, variables.$white);
+  }
+  .xy-button-default {
+    @include mixins.button-style(
+      variables.$white,
+      variables.$gray-400,
+      variables.$body-color,
+      variables.$white,
+      variables.$primary,
+      variables.$primary
+    );
+  }
+  .xy-button-link {
+    font-weight: variables.$font-weight-normal;
+    color: variables.$btn-link-color;
+    text-decoration: variables.$link-decoration;
+    box-shadow: none;
+    &:hover {
+      color: variables.$btn-link-hover-color;
+      text-decoration: variables.$link-hover-decoration;
+    }
+    &:focus,
+    &.focus {
+      text-decoration: variables.$link-hover-decoration;
+      color: variables.$btn-link-hover-color;
+      box-shadow: none;
+    }
+    &:disabled,
+    &.disabled {
+      color: variables.$btn-link-disabled-color;
+      pointer-events: none;
+    }
+  }

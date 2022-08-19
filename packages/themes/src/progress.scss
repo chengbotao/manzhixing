@@ -1,0 +1,42 @@
+// config
+@use "variables";
+
+.xy-progress-bar {
+  width: 100%;
+  box-sizing: border-box;
+  .xy-progress-bar-outer {
+    border-radius: variables.$progress-border-radius;
+    background-color: variables.$progress-bg;
+    overflow: hidden;
+    position: relative;
+  }
+  .xy-progress-bar-inner {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    border-radius: variables.$progress-border-radius;
+    line-height: 1;
+    transition: variables.$progress-bar-transition;
+    .inner-text {
+      color: variables.$progress-bar-color;
+      font-size: variables.$progress-font-size;
+      margin: 0 5px;
+    }
+  }
+  @each $key, $val in variables.$theme-colors {
+    .color-#{$key} {
+      background-color: $val;
+    }
+    @if $key == "light" {
+      .color-#{$key} {
+        .inner-text {
+          color: variables.$dark;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,111 @@
+// config
+@use "variables";
+
+// mixins
+@use "mixins";
+
+.xy-input-wrapper {
+    display: flex;
+    width: 100%;
+    position: relative;
+    .icon-wrapper {
+      position: absolute;
+      width: 35px;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      justify-content: center;
+      color: variables.$input-color;
+      display: flex;
+      align-items: center;
+      svg {
+        color: variables.$input-placeholder-color;
+      }
+    }
+  }
+  .icon-wrapper + .xy-input-inner {
+    padding-right: 35px;
+  }
+  .xy-input-inner {
+    width: 100%;
+    padding: variables.$input-padding-y variables.$input-padding-x;
+    font-family: variables.$input-font-family;
+    font-size: variables.$input-font-size;
+    font-weight: variables.$input-font-weight;
+    line-height: variables.$input-line-height;
+    color: variables.$input-color;
+    background-color: variables.$input-bg;
+    background-clip: padding-box;
+    border: variables.$input-border-width solid variables.$input-border-color;
+
+    // Note: This has no effect on <select>s in some browsers, due to the limited stylability of `<select>`s in CSS.
+    border-radius: variables.$input-border-radius;
+
+    box-shadow: variables.$input-box-shadow;
+    transition: variables.$input-transition;
+
+    &:focus {
+      color: variables.$input-focus-color;
+      background-color: variables.$input-focus-bg;
+      border-color: variables.$input-focus-border-color;
+      outline: 0;
+      box-shadow: variables.$input-focus-box-shadow;
+      // Avoid using mixin so we can pass custom focus shadow properly
+    }
+    &::placeholder {
+      color: variables.$input-placeholder-color;
+      // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
+      opacity: 1;
+    }
+    &:disabled {
+      cursor: not-allowed;
+    }
+    &:disabled,
+    &[readonly] {
+      background-color: variables.$input-disabled-bg;
+      border-color: variables.$input-disabled-border-color;
+      // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655.
+      opacity: 1;
+    }
+  }
+  .xy-input-group-prepend,
+  .xy-input-group-append {
+    display: flex;
+    align-items: center;
+    padding: variables.$input-padding-y variables.$input-padding-x;
+    margin-bottom: 0; // Allow use of <label> elements by overriding our default margin-bottom
+    font-size: variables.$input-font-size; // Match inputs
+    font-weight: variables.$font-weight-normal;
+    line-height: variables.$input-line-height;
+    color: variables.$input-group-addon-color;
+    text-align: center;
+    white-space: nowrap;
+    background-color: variables.$input-group-addon-bg;
+    // border: $input-border-width solid $input-group-addon-border-color;
+    border-radius: variables.$input-border-radius;
+  }
+  .xy-input-group-append + .btn {
+    padding: 0;
+    border: 0;
+  }
+  .xy-input-group > .xy-input-group-prepend,
+  .xy-input-group.xy-input-group-append > .xy-input-inner {
+    @include mixins.border-right-radius(0);
+  }
+
+  .xy-input-group > .xy-input-group-append,
+  .xy-input-group.xy-input-group-prepend > .xy-input-inner {
+    @include mixins.border-left-radius(0);
+  }
+
+  .xy-input-size-sm .xy-input-inner {
+    padding: variables.$input-padding-y-sm variables.$input-padding-x-sm;
+    font-size: variables.$input-font-size-sm;
+    border-radius: variables.$input-border-radius-sm;
+  }
+
+  .xy-input-size-lg .xy-input-inner {
+    padding: variables.$input-padding-y-lg variables.$input-padding-x-lg;
+    font-size: variables.$input-font-size-lg;
+    border-radius: variables.$input-border-radius-lg;
+  }

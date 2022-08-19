@@ -1,0 +1,5 @@
+@use "mixins";
+@include mixins.zoom-animation('top', scaleY(0), scaleY(1), center top);
+@include mixins.zoom-animation('left', scale(0.45, 0.45), scale(1, 1), top left);
+@include mixins.zoom-animation('right', scale(0.45, 0.45), scale(1, 1), top right);
+@include mixins.zoom-animation('bottom', scaleY(0), scaleY(1), center bottom);

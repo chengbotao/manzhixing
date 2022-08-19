@@ -1,0 +1,39 @@
+.VPImage.image-src {
+  border-radius: 50%;
+}
+
+.vp-doc._vue3xy_examples_autoComplete ul,
+.vp-doc._vue3xy_examples_menu ul,
+.vp-doc._vue3xy_examples_upload ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* docs:dev */
+.vp-doc._examples_autoComplete ul,
+.vp-doc._examples_menu ul,
+.vp-doc._examples_upload ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* 设置滚动条的样式 */
+::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;
+}
+/* 滚动槽 */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+/* 滚动条滑块 */
+::-webkit-scrollbar-thumb {
+  cursor: pointer;
+  border-radius: 3px;
+  background-color: hsla(220, 4%, 58%, 0.3);
+}
+::-webkit-scrollbar-thumb:window-inactive {
+  background-color: hsla(220, 4%, 58%, 0.3);
+}

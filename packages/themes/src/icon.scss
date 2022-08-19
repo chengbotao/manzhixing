@@ -1,0 +1,8 @@
+// config
+@use "variables";
+
+@each $key, $val in variables.$theme-colors {
+    .xy-icon-#{$key} {
+      color: $val;
+    }
+  }
