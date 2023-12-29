@@ -60,6 +60,10 @@ export default {
             {
               text: "setValueByReference<根据对象的引用设置值>",
               link: '/setValueByReference/',
+            },
+            {
+              text: "interpolateList<字符串格式化>",
+              link: '/interpolateList/',
             }
           ]
         },
