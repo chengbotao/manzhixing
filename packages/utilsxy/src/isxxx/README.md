@@ -21,11 +21,7 @@ import { isURLSearchParams } from "@manzhixing/utilsxy"
 isURLSearchParams(new URLSearchParams()) // true
 ```
 
-```ts [源代码: isURLSearchParams]
-export function isURLSearchParams(val: unknown): val is URLSearchParams {
-  return typeof val !== 'undefined' && val instanceof URLSearchParams;
-}
-```
+<<< @/src/isxxx/index.ts#isURLSearchParams [源代码: isURLSearchParams]
 
 :::
 
@@ -48,20 +44,7 @@ isEmpty([]) // true
 isEmpty({}) // true
 ```
 
-```ts [源代码: isEmpty]
-export function isEmpty(values: unknown[] | Record<string, unknown>): boolean {
-  if (Array.isArray(values)) {
-    // 数组为空
-    if (values.length > 0) return false;
-  } else {
-    // 对象为空
-    for (const key in values) {
-      return !!key && false;
-    }
-  }
-  return true;
-}
-```
+<<< @/src/isxxx/index.ts#isEmpty [源代码: isEmpty]
 
 :::
 
@@ -83,11 +66,7 @@ import { isFormData } from "@manzhixing/utilsxy"
 isFormData(new FormData())
 ```
 
-```ts [源代码: isFormData]
-export function isFormData(val: unknown): val is FormData {
-  return typeof val !== 'undefined' && val instanceof FormData;
-}
-```
+<<< @/src/isxxx/index.ts#isFormData [源代码: isFormData]
 
 :::
 
@@ -111,10 +90,6 @@ isPlainObject([]) // false
 
 ```
 
-```ts [源代码: isPlainObject]
-export function isPlainObject(val: unknown): val is Record<string, unknown> {
-  return Object.prototype.toString.call(val) === '[object Object]';
-}
-```
+<<< @/src/isxxx/index.ts#isPlainObject [源代码: isPlainObject]
 
 :::
