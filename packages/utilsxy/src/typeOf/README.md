@@ -17,7 +17,7 @@ _`{ string }`_: 全小写的表示类型的字符串
 ::: code-group
 
 ```ts [使用]
-import { typeOf } from '@botaoxy/utilsxy';
+import { typeOf } from '@manzhixing/utilsxy';
 
 typeOf("chengbotao"); // "string"
 typeOf(28); // "number"

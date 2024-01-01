@@ -14,7 +14,7 @@
 ::: code-group
 
 ```ts [使用]
-import { deepClone } from '@botaoxy/utilsxy';
+import { deepClone } from '@manzhixing/utilsxy';
 
 const map = new Map();
 map.set("name", "chengbotao");

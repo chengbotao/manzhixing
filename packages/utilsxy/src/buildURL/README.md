@@ -15,14 +15,14 @@ _构建**URL**_
 ::: code-group
 
 ```ts 使用
-import { buildURL } from "@botaoxy/utilsxy";
+import { buildURL } from "@manzhixing/utilsxy";
 
 const url = "http://botaoonline.com.cn/search";
 const params = {
- userName: "botaoxy",
+ userName: "manzhixing",
  password: "123456",
 };
-buildURL(url, params); // http://botaoonline.com.cn/search?userName=botaoxy&password=123456
+buildURL(url, params); // http://botaoonline.com.cn/search?userName=manzhixing&password=123456
 ```
 
 <<< @/src/buildURL/index.ts [源代码: buildURL]

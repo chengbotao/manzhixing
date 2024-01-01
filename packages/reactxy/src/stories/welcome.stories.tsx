@@ -10,7 +10,7 @@ storiesOf('Welcome page', module).add(
   () => {
     return (
       <>
-        <h1>欢迎来到 React Botaoxy Design 组件库</h1>
+        <h1>欢迎来到 React manzhixing Design 组件库</h1>
       </>
     );
   },

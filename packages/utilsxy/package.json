@@ -1,5 +1,5 @@
 {
-  "name": "@botaoxy/utilsxy",
+  "name": "@manzhixing/utilsxy",
   "version": "1.0.0",
   "description": "前端常见的操作和功能的函数",
   "main": "dist/utilsxy.js",
@@ -17,10 +17,10 @@
     "javascript",
     "typescript"
   ],
-  "repository": "git@github.com:chengbotao/botaoxy.git",
+  "repository": "git@github.com:chengbotao/manzhixing.git",
   "homepage": "https://chengbotao.github.io/utilsxy/",
   "bugs": {
-    "url": "https://github.com/chengbotao/botaoxy/issues",
+    "url": "https://github.com/chengbotao/manzhixing/issues",
     "email": "chengbotao5221@163.com"
   },
   "author": "chengbotao <chengbotao5221@163.com>",

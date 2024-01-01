@@ -13,7 +13,7 @@ _解析获取 **URL** 参数_
 ::: code-group
 
 ```ts [使用]
-import { parseURL } from "@botaoxy/utilsxy"
+import { parseURL } from "@manzhixing/utilsxy"
 
 parseURL('http://botaoonline.com.cn/search?a=1&b=2');
 

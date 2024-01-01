@@ -1,21 +1,21 @@
-# @botaoxy/vue3xy
+# @manzhixing/vue3xy
 
 > **Vue3 组件库**
 
 ## Install
 
 ```bash
-npm install @botaoxy/vue3xy
+npm install @manzhixing/vue3xy
 # OR
-yarn add @botaoxy/vue3xy
+yarn add @manzhixing/vue3xy
 ```
 
 ### 安装主题包
 
 ```bash
-npm install @botaoxy/themes
+npm install @manzhixing/themes
 # OR
-yarn add @botaoxy/themes
+yarn add @manzhixing/themes
 ```
 
 ## Usage
@@ -25,8 +25,8 @@ yarn add @botaoxy/themes
 ```ts
 // 全量引入
 import { createApp } from "vue";
-import vue3xy from "@botaoxy/vue3xy";
-import "@botaoxy/themes";
+import vue3xy from "@manzhixing/vue3xy";
+import "@manzhixing/themes";
 import App from "./App.vue";
 
 createApp(App).use(vue3xy).mount("#app");
@@ -36,8 +36,8 @@ createApp(App).use(vue3xy).mount("#app");
 
 ```ts
 import { createApp } from "vue";
-import { xyButton } from "@botaoxy/vue3xy";
-import "@botaoxy/themes/dist/button.css";
+import { xyButton } from "@manzhixing/vue3xy";
+import "@manzhixing/themes/dist/button.css";
 import App from "./App.vue";
 
 createApp(App).use(xyButton).mount("#app");

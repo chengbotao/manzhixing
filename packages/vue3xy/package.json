@@ -1,5 +1,5 @@
 {
-  "name": "@botaoxy/vue3xy",
+  "name": "@manzhixing/vue3xy",
   "version": "1.0.0",
   "type": "module",
   "main": "dist/vue3xy.umd.cjs",
@@ -8,10 +8,10 @@
   "keywords": [
     "vue3"
   ],
-  "repository": "git@github.com:chengbotao/botaoxy.git",
+  "repository": "git@github.com:chengbotao/manzhixing.git",
   "homepage": "https://chengbotao.github.io/vue3xy/",
   "bugs": {
-    "url": "https://github.com/chengbotao/botaoxy/issues",
+    "url": "https://github.com/chengbotao/manzhixing/issues",
     "email": "chengbotao5221@163.com"
   },
   "author": "chengbotao <chengbotao5221@163.com>",

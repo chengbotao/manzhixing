@@ -18,7 +18,7 @@ _`{ Record<string, unknown>[] }`_
 ::: code-group
 
 ```ts [使用]
-import { treeToFlat } from '@botaoxy/utilsxy';
+import { treeToFlat } from '@manzhixing/utilsxy';
 
 const provinceList = [
   {

@@ -1,5 +1,5 @@
 {
-  "name": "@botaoxy/themes",
+  "name": "@manzhixing/themes",
   "version": "1.0.0",
   "description": "vue3xy&reactxy 主题样式",
   "main": "dist/index.css",
@@ -12,9 +12,9 @@
     "css",
     "scss"
   ],
-  "repository": "git@github.com:chengbotao/botaoxy.git",
+  "repository": "git@github.com:chengbotao/manzhixing.git",
   "bugs": {
-    "url": "https://github.com/chengbotao/botaoxy/issues",
+    "url": "https://github.com/chengbotao/manzhixing/issues",
     "email": "chengbotao5221@163.com"
   },
   "author": "chengbotao <chengbotao5221@163.com>",

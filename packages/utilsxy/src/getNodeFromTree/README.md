@@ -15,7 +15,7 @@ _根据**唯一标志**获取树形中的节点_
 ::: code-group
 
 ```ts [使用]
-import { getNodeFromTree } from '@botaoxy/utilsxy';
+import { getNodeFromTree } from '@manzhixing/utilsxy';
 
 const provinceList = [
   {

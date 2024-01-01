@@ -14,7 +14,7 @@
 ::: code-group
 
 ```ts [使用]
-import { curry } from '@botaoxy/utilsxy';
+import { curry } from '@manzhixing/utilsxy';
 
 function add(a, b) {
  return a + b;

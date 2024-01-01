@@ -15,7 +15,7 @@
 ::: code-group
 
 ```ts [使用]
-import { debounce } from  "@botaoxy/utilsxy"
+import { debounce } from  "@manzhixing/utilsxy"
 
 function add(a:number, b:number){
   console.log(a+b)

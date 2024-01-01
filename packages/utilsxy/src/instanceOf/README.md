@@ -14,7 +14,7 @@ _检测构造函数的 `prototype` 属性是否出现在某个实例对象的原
 ::: code-group
 
 ```ts [使用]
-import { instanceOf } from '@botaoxy/utilsxy';
+import { instanceOf } from '@manzhixing/utilsxy';
 
 class Car {
     make: string;
