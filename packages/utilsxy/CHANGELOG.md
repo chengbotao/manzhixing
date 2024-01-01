@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.0.1
+
+### Patch Changes
+
+- add interpolateList
+
 ## v1.0.0
 
 ### ✨ Features
