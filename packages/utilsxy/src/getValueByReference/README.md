@@ -14,7 +14,7 @@
 ::: code-group
 
 ```ts [使用]
-import { getValueByReference } from '@botaoxy/utilsxy';
+import { getValueByReference } from '@manzhixing/utilsxy';
 
 const obj = {
   userInfo: {

@@ -15,7 +15,7 @@
 ::: code-group
 
 ```ts [使用]
-import { setValueByReference } from '@botaoxy/utilsxy';
+import { setValueByReference } from '@manzhixing/utilsxy';
 
 const obj = {
   a: {

@@ -119,7 +119,7 @@ export default {
       next: '下一个',
     },
     footer: {
-      message: 'Released under the <a href="https://github.com/chengbotao/botaoxy/blob/main/LICENSE">MIT License</a>.',
+      message: 'Released under the <a href="https://github.com/chengbotao/manzhixing/blob/main/LICENSE">MIT License</a>.',
       copyright: 'Copyright © 2024-present <a href="https://github.com/chengbotao">Chengbotao</a>'
     }
   },

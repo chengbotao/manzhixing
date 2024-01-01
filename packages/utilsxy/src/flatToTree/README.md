@@ -14,7 +14,7 @@
 ::: code-group
 
 ```ts [使用]
-import  { flatToTree } from  "@botaoxy/utilsxy"
+import  { flatToTree } from  "@manzhixing/utilsxy"
 const provinceFlat = [
   {
     id: '1000',

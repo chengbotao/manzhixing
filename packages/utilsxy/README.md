@@ -1,26 +1,26 @@
-# @botaoxy/utilsxy
+# @manzhixing/utilsxy
 
 > **前端常见的操作和功能的函数**
 
 ## Install
 
 ```bash
-npm install @botaoxy/utilsxy
+npm install @manzhixing/utilsxy
 
 # OR
 
-yarn add @botaoxy/utilsxy
+yarn add @manzhixing/utilsxy
 ```
 
 ## Usage
 
 ```ts
 // 全量引入
-import * as utilsxy from '@botaoxy/utilsxy';
+import * as utilsxy from '@manzhixing/utilsxy';
 utilsxy.typeOf('chengbotao'); // "string"
 
 // 差量使用
-import { typeOf } from '@botaoxy/utilsxy';
+import { typeOf } from '@manzhixing/utilsxy';
 typeOf('chengbotao'); // "string"
 ```
 

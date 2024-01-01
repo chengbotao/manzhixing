@@ -14,7 +14,7 @@
 ::: code-group
 
 ```ts [使用]
-import { partial } from "@botaoxy/utilsxy"
+import { partial } from "@manzhixing/utilsxy"
 
 function isType(type: string, val: any) {
   return Object.prototype.toString.call(val) === `[object ${type}]`;

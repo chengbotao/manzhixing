@@ -15,7 +15,7 @@
 ::: code-group
 
 ``` ts [使用]
-import { jsonp } from "@botaoxy/utilsxy"
+import { jsonp } from "@manzhixing/utilsxy"
 
 // 调用 百度搜索🔍API
 jsonp({

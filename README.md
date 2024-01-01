@@ -8,8 +8,8 @@
 1. 新建项目文件夹
 
 ```sh
-mkdir botaoxy
-cd botaoxy
+mkdir manzhixing
+cd manzhixing
 ```
 
 2. 初始化项目

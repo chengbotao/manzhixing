@@ -20,7 +20,7 @@
 ::: code-group
 
 ```ts [使用]
-import { throttle } from "@botaoxy/utilsxy"
+import { throttle } from "@manzhixing/utilsxy"
 
 function add(a:number, b:number){
   console.log(a+b)

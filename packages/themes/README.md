@@ -1,25 +1,25 @@
-# @botaoxy/themes
+# @manzhixing/themes
 
 > **主题包**
 
 ## Install
 
 ```bash
-npm install @botaoxy/themes
+npm install @manzhixing/themes
 
 # OR
 
-yarn add @botaoxy/themes
+yarn add @manzhixing/themes
 ```
 
 ## Usage
 
 ```ts
 // 全量引入
-import '@botaoxy/themes';
+import '@manzhixing/themes';
 
 // 差量使用
-import '@botaoxy/themes/dist/button.css';
+import '@manzhixing/themes/dist/button.css';
 ```
 
 ## License

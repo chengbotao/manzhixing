@@ -11,14 +11,14 @@ hero:
     有助于提高开发效率并减少重复编写代码的工作量.
   image:
     src: /chengbotao.png
-    alt: Botaoxy
+    alt: manzhixing
   actions:
     - theme: brand
       text: 开始
       link: /typeOf/
     - theme: alt
       text: GitHub
-      link: https://github.com/chengbotao/botaoxy
+      link: https://github.com/chengbotao/manzhixing
 
 # features:
 #   - icon: 🛠️

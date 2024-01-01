@@ -16,7 +16,7 @@
 ::: code-group
 
 ```ts [使用]
-import { isURLSearchParams } from "@botaoxy/utilsxy"
+import { isURLSearchParams } from "@manzhixing/utilsxy"
 
 isURLSearchParams(new URLSearchParams()) // true
 ```
@@ -42,7 +42,7 @@ export function isURLSearchParams(val: unknown): val is URLSearchParams {
 ::: code-group
 
 ```ts [使用]
-import { isEmpty } from "@botaoxy/utilsxy"
+import { isEmpty } from "@manzhixing/utilsxy"
 
 isEmpty([]) // true
 isEmpty({}) // true
@@ -78,7 +78,7 @@ export function isEmpty(values: unknown[] | Record<string, unknown>): boolean {
 ::: code-group
 
 ```ts [使用]
-import { isFormData } from "@botaoxy/utilsxy"
+import { isFormData } from "@manzhixing/utilsxy"
 
 isFormData(new FormData())
 ```
@@ -104,7 +104,7 @@ export function isFormData(val: unknown): val is FormData {
 ::: code-group
 
 ```ts [使用]
-import { isPlainObject } from "@botaoxy/utilsxy"
+import { isPlainObject } from "@manzhixing/utilsxy"
 
 isPlainObject({}) // true
 isPlainObject([]) // false
