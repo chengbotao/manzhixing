@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.0.2
+
+### Patch Changes
+
+- 移除 babel 的配置,保证打包后可正常引入使用,后续在使用 babel 做兼容
+
 ## 1.0.1
 
 ### Patch Changes
