@@ -8,9 +8,9 @@ import pkg from './package.json';
 import json from '@rollup/plugin-json';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
-import alias from '@rollup/plugin-alias';
 import typescript from '@rollup/plugin-typescript';
-import { babel } from '@rollup/plugin-babel';
+// import alias from '@rollup/plugin-alias';
+// import { babel } from '@rollup/plugin-babel';
 
 const { version } = pkg;
 const outputConf = {
@@ -34,20 +34,20 @@ export default {
     },
   ],
   plugins: [
-    alias({
-      entries: {
-        packages: resolve(__dirname, 'packages'),
-      },
-    }),
+    // alias({
+    //   entries: {
+    //     packages: resolve(__dirname, 'packages'),
+    //   },
+    // }),
     nodeResolve({
       extensions: ['.ts', '.tsx', '.mjs', '.js', '.jsx', '.json'],
     }),
     commonjs(),
-    babel({
-      babelHelpers: 'runtime',
-      exclude: 'node_modules/**',
-      extensions: ['.js', '.jsx', '.es6', '.es', '.mjs', '.ts', 'tsx'],
-    }),
+    // babel({
+    //   babelHelpers: 'runtime',
+    //   exclude: 'node_modules/**',
+    //   extensions: ['.js', '.jsx', '.es6', '.es', '.mjs', '.ts', 'tsx'],
+    // }),
     typescript(),
     json(),
   ],
