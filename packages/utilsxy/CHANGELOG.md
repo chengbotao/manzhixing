@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.0.3
+
+### Patch Changes
+
+- add getType: 获取类型值
+
 ## 1.0.2
 
 ### Patch Changes
