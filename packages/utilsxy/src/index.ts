@@ -20,3 +20,4 @@ export { parseURL } from './parseURL';
 export { partial } from './partial';
 export { throttle } from './throttle';
 export { interpolateList } from './interpolateList';
+export { getType } from './getType';
