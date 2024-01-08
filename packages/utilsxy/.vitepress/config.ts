@@ -32,10 +32,6 @@ export default {
               text: 'instanceOf<检测构造函数>',
               link: '/instanceOf/',
             },
-            {
-              text: 'webStorageAdapter<本地存储扩展>',
-              link: '/web-storage-adapter/',
-            },
           ],
         },
         {
@@ -124,6 +120,15 @@ export default {
             }
           ],
         },
+        {
+          text: '其他工具包',
+          items: [
+            {
+              text: 'webStorageAdapter<本地存储扩展>',
+              link: '/web-storage-adapter/',
+            },
+          ],
+        }
       ],
     },
     docFooter: {
