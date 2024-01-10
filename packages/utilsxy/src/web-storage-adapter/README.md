@@ -104,3 +104,7 @@ localStore.get('arr') // [{ name: 'botaocheng' }]
 localStore.set('sym', Symbol.for('web-storage-adapter'))
 localStore.get('sym') // Symbol(web-storage-adapter)
 ```
+
+## UML
+
+![webStorage](./webStorage.svg)
