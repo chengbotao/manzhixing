@@ -127,6 +127,10 @@ export default {
               text: 'webStorageAdapter<本地存储扩展>',
               link: '/web-storage-adapter/',
             },
+            {
+              text: 'vuexPersistedPlugin<持久化插件>',
+              link: '/vuex-persisted-plugin/',
+            },
           ],
         }
       ],
