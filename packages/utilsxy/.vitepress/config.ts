@@ -131,6 +131,10 @@ export default {
               text: 'vuexPersistedPlugin<持久化插件>',
               link: '/vuex-persisted-plugin/',
             },
+            {
+              text: 'piniaPersistedPlugin<持久化插件>',
+              link: '/pinia-persisted-plugin/',
+            },
           ],
         }
       ],
