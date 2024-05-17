@@ -45,13 +45,13 @@ const store = createStore({
 
 | 属性                | 说明                                       | 类型                                                        | 默认值                                                                               |
 | ------------------- | ------------------------------------------ | ----------------------------------------------------------- | ------------------------------------------------------------------------------------ |
-| `paths`             | 需要持久化状态属性集合                     | (string\|Path)[]                                            | []                                                                                   |
+| `paths`             | 需要持久化状态属性集合                     | `(string\|Path)[]`                                            | []                                                                                   |
 | `storage`           | 指定存储类型                               | Storage                                                     | localStorage                                                                         |
 | `storageKey`        | 存储中存储状态的键值                       | string                                                      | \_\_VUEX_PERSIST_PLUGIN\_\_                                                          |
-| `getState`          | 自定义获取本地存储中状态的逻辑             | (storage: Storage, key: string) => Record<string, unknown>; | (storage, key) => {return storage.getItem(key) && JSON.parse(storage.getItem(key)!)} |
-| `setState`          | 用于自定义将状态存储到本地存储的逻辑       | (storage: Storage, key: string, value: unknown) => void;    | (storage, key, value) => {storage.setItem(key, JSON.stringify(value));}              |
-| `removeState`       | 用于自定义从本地存储中移除状态的逻辑       | (storage: Storage, key: string) => void;                    | (storage, key) => {storage.removeItem(key)}                                          |
-| `mutationFilter`    | 用于过滤哪些 mutation 会触发状态持久化     | (mutation: MutationPayload) => boolean                      | (mutation) => true                                                                   |
+| `getState`          | 自定义获取本地存储中状态的逻辑             | (storage: Storage, key: string) => Record<string, unknown>; | `(storage, key) => {return storage.getItem(key) && JSON.parse(storage.getItem(key)!)}` |
+| `setState`          | 用于自定义将状态存储到本地存储的逻辑       | `(storage: Storage, key: string, value: unknown) => void;`    | `(storage, key, value) => {storage.setItem(key, JSON.stringify(value));}`              |
+| `removeState`       | 用于自定义从本地存储中移除状态的逻辑       | `(storage: Storage, key: string) => void;`                    | `(storage, key) => {storage.removeItem(key)}`                                          |
+| `mutationFilter`    | 用于过滤哪些 mutation 会触发状态持久化     | `(mutation: MutationPayload) => boolean`                      | `(mutation) => true`                                                                   |
 | `resetMutationType` | 指定一个 mutation 类型会重置状态为初始状态 | string                                                      | \_\_RESET_STATE\_\_                                                                  |
 
 ## 配置
@@ -119,26 +119,26 @@ paths: ['count', { paths: ["userInfo.name"], storage: sessionStorage }]
 
 ### getState
 
-- 类型: (storage: Storage, key: string) => Record<string, unknown>
-- 默认值: (storage, key) => {return storage.getItem(key) && JSON.parse(storage.getItem(key)!)}
-用于自定义获取本地存储中状态的逻辑，默认使用 localStorage.getItem(key) 并 JSON.parse() 获取状态。
+- 类型: `(storage: Storage, key: string) => Record<string, unknown>`
+- 默认值: `(storage, key) => {return storage.getItem(key) && JSON.parse(storage.getItem(key)!)}`
+用于自定义获取本地存储中状态的逻辑，默认使用 `localStorage.getItem(key)` 并 `JSON.parse()` 获取状态。
 
 ### setState
 
-- 类型: (storage: Storage, key: string, value: unknown) => void
-- 默认值: (storage, key, value) => {storage.setItem(key, JSON.stringify(value));}
-用于自定义将状态存储到本地存储的逻辑，默认使用 localStorage.setItem(key, JSON.stringify(value)) 存储状态。
+- 类型: `(storage: Storage, key: string, value: unknown) => void`
+- 默认值: `(storage, key, value) => {storage.setItem(key, JSON.stringify(value));}`
+用于自定义将状态存储到本地存储的逻辑，默认使用 `localStorage.setItem(key, JSON.stringify(value))` 存储状态。
 
 ### removeState
 
-- 类型: (storage: Storage, key: string) => void
-- 默认值: (storage, key) => {storage.removeItem(key)}
-用于自定义从本地存储中移除状态的逻辑，默认使用 localStorage.removeItem(key) 移除状态。
+- 类型: `(storage: Storage, key: string) => void`
+- 默认值: `(storage, key) => {storage.removeItem(key)}`
+用于自定义从本地存储中移除状态的逻辑，默认使用 `localStorage.removeItem(key)` 移除状态。
 
 ### mutationFilter
 
-- 类型: (mutation: MutationPayload) => boolean
-- 默认值: (mutation) => true
+- 类型: `(mutation: MutationPayload) => boolean`
+- 默认值: `(mutation) => true`
 用于过滤哪些 mutation 会触发状态持久化，默认会持久化所有 mutation。
 
 ### resetMutationType

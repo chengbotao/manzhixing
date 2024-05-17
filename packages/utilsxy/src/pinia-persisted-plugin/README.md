@@ -46,10 +46,10 @@ const useStore = defineStore(key, {
 | ------------- | ------------------------------------ | ----------------------------------------------------------- | ------------------------------------------------------------------------------------ |
 | `paths`       | 需要持久化状态属性集合               | (string\|Path)[] \| undefined                               | []                                                                                   |
 | `storage`     | 指定存储类型                         | Storage                                                     | localStorage                                                                         |
-| `storageKey`  | 存储中存储状态的键值                 | string \| ((id: string) => string)                          | (storeKey) => `${DEFAULT_STORAGE_KEY}${storeKey}`                                    |
-| `getState`    | 自定义获取本地存储中状态的逻辑       | (storage: Storage, key: string) => Record<string, unknown>; | (storage, key) => {return storage.getItem(key) && JSON.parse(storage.getItem(key)!)} |
-| `setState`    | 用于自定义将状态存储到本地存储的逻辑 | (storage: Storage, key: string, value: unknown) => void;    | (storage, key, value) => {storage.setItem(key, JSON.stringify(value));}              |
-| `removeState` | 用于自定义从本地存储中移除状态的逻辑 | (storage: Storage, key: string) => void;                    | (storage, key) => {storage.removeItem(key)}                                          |
+| `storageKey`  | 存储中存储状态的键值                 | string \| `((id: string) => string)`                          | `(storeKey) => ${DEFAULT_STORAGE_KEY}${storeKey}`                                    |
+| `getState`    | 自定义获取本地存储中状态的逻辑       | `(storage: Storage, key: string) => Record<string, unknown>;` | `(storage, key) => {return storage.getItem(key) && JSON.parse(storage.getItem(key)!)}` |
+| `setState`    | 用于自定义将状态存储到本地存储的逻辑 | `(storage: Storage, key: string, value: unknown) => void;`    | `(storage, key, value) => {storage.setItem(key, JSON.stringify(value));}`              |
+| `removeState` | 用于自定义从本地存储中移除状态的逻辑 | `(storage: Storage, key: string) => void;`                    | `(storage, key) => {storage.removeItem(key)}`                                          |
 
 ## 方法
 
@@ -117,33 +117,33 @@ paths: ['count', { paths: ["userInfo.name"], storage: sessionStorage }]
 
 ### storageKey
 
-- 类型: string | ((id: string) => string)
-- 默认值: (storeKey) => `${DEFAULT_STORAGE_KEY}${storeKey}`
+- 类型: string | `((id: string) => string)`
+- 默认值: `(storeKey) => ${DEFAULT_STORAGE_KEY}${storeKey}`
 - DEFAULT_STORAGE_KEY : "\_\_PINIA_PERSIST_PLUGIN\_\_"
 - storeKey : store.$id
 
-用于指定存储中存储状态的键值，默认值为 (storeKey) => `${DEFAULT_STORAGE_KEY}${storeKey}`。
+用于指定存储中存储状态的键值，默认值为 `(storeKey) => ${DEFAULT_STORAGE_KEY}${storeKey}`。
 
 ### getState
 
-- 类型: (storage: Storage, key: string) => Record<string, unknown>
-- 默认值: (storage, key) => {return storage.getItem(key) && JSON.parse(storage.getItem(key)!)}
+- 类型: `(storage: Storage, key: string) => Record<string, unknown>`
+- 默认值: `(storage, key) => {return storage.getItem(key) && JSON.parse(storage.getItem(key)!)}`
 
-用于自定义获取本地存储中状态的逻辑，默认使用 localStorage.getItem(key) 并 JSON.parse() 获取状态。
+用于自定义获取本地存储中状态的逻辑，默认使用 `localStorage.getItem(key)` 并 `JSON.parse()` 获取状态。
 
 ### setState
 
-- 类型: (storage: Storage, key: string, value: unknown) => void
-- 默认值: (storage, key, value) => {storage.setItem(key, JSON.stringify(value));}
+- 类型: `(storage: Storage, key: string, value: unknown) => void`
+- 默认值: `(storage, key, value) => {storage.setItem(key, JSON.stringify(value));}`
 
-用于自定义将状态存储到本地存储的逻辑，默认使用 localStorage.setItem(key, JSON.stringify(value)) 存储状态。
+用于自定义将状态存储到本地存储的逻辑，默认使用 `localStorage.setItem(key, JSON.stringify(value))` 存储状态。
 
 ### removeState
 
-- 类型: (storage: Storage, key: string) => void
-- 默认值: (storage, key) => {storage.removeItem(key)}
+- 类型: `(storage: Storage, key: string) => void`
+- 默认值: `(storage, key) => {storage.removeItem(key)}`
 
-用于自定义从本地存储中移除状态的逻辑，默认使用 localStorage.removeItem(key) 移除状态。
+用于自定义从本地存储中移除状态的逻辑，默认使用 `localStorage.removeItem(key)` 移除状态。
 
 ### $hydrate
 

@@ -2,10 +2,11 @@
  * @Author: Chengbotao
  * @Contact: https://github.com/chengbotao
  */
+import { defineConfig } from 'vitepress'
 
 const ENV_PATH = process.title.includes('utilsxy:docs:dev') ? '/' : '/utilsxy/';
 
-export default {
+export default defineConfig({
   srcDir: '.',
   base: ENV_PATH,
   title: 'Utilsxy',
@@ -149,4 +150,4 @@ export default {
       copyright: 'Copyright © 2024-present <a href="https://github.com/chengbotao">Chengbotao</a>',
     },
   },
-};
+});
