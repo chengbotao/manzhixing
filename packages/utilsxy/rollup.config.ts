@@ -1,54 +1,43 @@
 /*
  * @Author: Chengbotao
- * @Date: 2023-12-18 11:35:18
+ * @Contact: https://github.com/chengbotao
  */
-import { resolve } from 'path';
-import pkg from './package.json';
+import pkg from "./package.json" assert { type: "json" };
 
-import json from '@rollup/plugin-json';
-import { nodeResolve } from '@rollup/plugin-node-resolve';
-import commonjs from '@rollup/plugin-commonjs';
-import typescript from '@rollup/plugin-typescript';
-// import alias from '@rollup/plugin-alias';
-// import { babel } from '@rollup/plugin-babel';
+import type { RollupOptions } from "rollup";
+import commonjs from "@rollup/plugin-commonjs";
+import typescript from "@rollup/plugin-typescript";
+import { dts } from "rollup-plugin-dts";
 
-const { version } = pkg;
+const { name, version, author } = pkg;
 const outputConf = {
-  banner: `/* utilsxy version ${version} */`,
-  footer: `/* Follow me on GitHub! @chengbotao */`,
+	banner: `/* ${name} version ${version} */`,
+	footer: `/* Follow me on GitHub! @${author} */`,
+};
+const config: RollupOptions = {
+	input: "src/index.ts",
+	output: [
+		{
+			file: "dist/index.esm.js",
+			format: "esm",
+			...outputConf,
+		},
+		{
+			file: "dist/index.umd.js",
+			format: "umd",
+			name: "vuexPersistedPlugin",
+			...outputConf,
+		},
+	],
+	plugins: [commonjs(), typescript()],
 };
 
-export default {
-  input: 'src/index.ts',
-  output: [
-    {
-      file: resolve(__dirname, 'dist', 'utilsxy.esm.js'),
-      format: 'esm',
-      ...outputConf,
-    },
-    {
-      file: resolve(__dirname, 'dist', 'utilsxy.js'),
-      format: 'umd',
-      name: 'utilsxy',
-      ...outputConf,
-    },
-  ],
-  plugins: [
-    // alias({
-    //   entries: {
-    //     packages: resolve(__dirname, 'packages'),
-    //   },
-    // }),
-    nodeResolve({
-      extensions: ['.ts', '.tsx', '.mjs', '.js', '.jsx', '.json'],
-    }),
-    commonjs(),
-    // babel({
-    //   babelHelpers: 'runtime',
-    //   exclude: 'node_modules/**',
-    //   extensions: ['.js', '.jsx', '.es6', '.es', '.mjs', '.ts', 'tsx'],
-    // }),
-    typescript(),
-    json(),
-  ],
+const _dts: RollupOptions = {
+	input: "src/index.ts",
+	output: {
+		file: "types/index.d.ts",
+		format: "esm",
+	},
+	plugins: [dts()],
 };
+export default [config, _dts];
