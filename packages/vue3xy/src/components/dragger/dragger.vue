@@ -8,30 +8,19 @@
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue'
-
-export default defineComponent({
-  name: 'XyDragger',
-  inheritAttrs: false,
-})
-
-</script>
-
 <script setup lang="ts">
 import { computed, ref } from "vue";
 import classNames from "classnames";
 
+defineOptions({
+  name: 'XyDragger',
+  inheritAttrs: false,
+})
 
 interface DraggerProps {
   onFile: (file: FileList) => void;
   className?: string
 }
-
-// defineOptions({
-//     name: 'XyDragger',
-//     inheritAttrs: false,
-// })
 
 // Props
 const props = withDefaults(defineProps<DraggerProps>(), {

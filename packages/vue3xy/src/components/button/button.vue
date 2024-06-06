@@ -11,19 +11,14 @@
     </a>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue'
-
-export default defineComponent({
-    name: 'XyButton',
-    inheritAttrs: false,
-})
-
-</script>
-
 <script setup lang="ts">
 import { computed } from "vue";
 import classNames from "classnames";
+
+defineOptions({
+    name: 'XyButton',
+    inheritAttrs: false,
+})
 
 type ButtonSize = "lg" | "sm";
 type ButtonType = "primary" | "default" | "danger" | "link";
@@ -39,11 +34,6 @@ interface ButtonProps {
 interface ButtonEmits {
     (event: "click", payload: MouseEvent): void
 }
-
-// defineOptions({
-//     name: 'XyButton',
-//     inheritAttrs: false,
-// })
 
 // Props
 const props = withDefaults(defineProps<ButtonProps>(), {

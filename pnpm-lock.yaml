@@ -315,9 +315,6 @@ importers:
       typescript:
         specifier: ^5.4.5
         version: 5.4.5
-      unplugin-vue-define-options:
-        specifier: ^1.4.5
-        version: 1.4.5(rollup@4.18.0)(vue@3.4.27(typescript@5.4.5))
       vite:
         specifier: ^5.2.11
         version: 5.2.11(@types/node@20.12.12)(sass@1.77.2)(terser@5.31.0)

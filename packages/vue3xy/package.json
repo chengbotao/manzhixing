@@ -51,7 +51,6 @@
     "@vue/compiler-sfc": "^3.4.27",
     "happy-dom": "^14.11.0",
     "typescript": "^5.4.5",
-    "unplugin-vue-define-options": "^1.4.5",
     "vite": "^5.2.11",
     "vitepress": "1.1.4",
     "vitest": "^1.6.0",

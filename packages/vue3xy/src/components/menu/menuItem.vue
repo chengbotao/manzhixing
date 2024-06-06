@@ -8,19 +8,14 @@
   </li>
 </template>
 
-<script lang="ts">
-import { defineComponent, Ref, useSlots } from 'vue'
-
-export default defineComponent({
-  name: 'XyMenuItem',
-  inheritAttrs: false,
-})
-
-</script>
-
 <script setup lang="ts">
-import { computed, inject } from "vue";
+import { computed, inject, Ref, useSlots } from "vue";
 import classNames from "classnames";
+
+defineOptions({
+    name: 'XyMenuItem',
+    inheritAttrs: false,
+})
 
 type MenuMode = 'horizontal' | 'vertical';
 type MenuSelectCallback = (selectedIndex: string) => void;
@@ -41,11 +36,6 @@ interface ProvideOrInjectTyping {
   onSelect?: MenuSelectCallback;
   defaultOpenSubMenus?: string[];
 }
-
-// defineOptions({
-//     name: 'XyMenuItem',
-//     inheritAttrs: false,
-// })
 
 // slots
 const slots = useSlots();

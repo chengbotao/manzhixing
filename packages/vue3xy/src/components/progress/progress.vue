@@ -12,19 +12,14 @@
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue'
-
-export default defineComponent({
-  name: 'XyProgress',
-  inheritAttrs: false,
-})
-
-</script>
-
 <script setup lang="ts">
 import { computed } from "vue"
 import classNames from "classnames";
+
+defineOptions({
+    name: 'XyProgress',
+    inheritAttrs: false,
+})
 
 interface ProgressProps {
   percent: number;
@@ -32,11 +27,6 @@ interface ProgressProps {
   showText?: boolean;
   theme?: string;
 }
-
-// defineOptions({
-//     name: 'XyProgress',
-//     inheritAttrs: false,
-// })
 
 // Props
 const props = withDefaults(defineProps<ProgressProps>(), {

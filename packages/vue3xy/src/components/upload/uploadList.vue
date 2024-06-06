@@ -24,17 +24,12 @@
   </ul>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue'
-
-export default defineComponent({
-  name: 'xyUploadList',
-  inheritAttrs: false,
+<script setup lang="ts">
+defineOptions({
+    name: 'xyUploadList',
+    inheritAttrs: false,
 })
 
-</script>
-
-<script setup lang="ts">
 type UploadFileStatus = 'ready' | 'uploading' | 'success' | 'error';
 
 interface UploadFile {
@@ -52,11 +47,6 @@ interface UploadListProps {
   fileList: UploadFile[];
   onRemove: (_file: UploadFile) => void;
 }
-
-// defineOptions({
-//     name: 'xyUploadList',
-//     inheritAttrs: false,
-// })
 
 // Props
 const props = withDefaults(defineProps<UploadListProps>(), {});

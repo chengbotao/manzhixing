@@ -10,7 +10,7 @@
         <div v-if="icon" key="icon" class="icon-wrapper">
             <xyIcon :icon="icon"></xyIcon>
         </div>
-        <input class="xy-input-inner" v-bind="$attrs" :disabled=disabled @focus="handleFocus" @blur="handleBlur"
+        <input class="xy-input-inner" v-bind="$attrs" :disabled="disabled" @focus="handleFocus" @blur="handleBlur"
             @change="handleChange" @input="handleInput" :value="modelValue" />
         <div v-if="slots.append" key="append" class="xy-input-group-append">
             <slot name="append"></slot>
@@ -18,19 +18,15 @@
     </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue'
-
-export default defineComponent({
-    name: 'XyInput',
-    inheritAttrs: false,
-})
-</script>
-
 <script setup lang="ts">
 import { useSlots } from "vue";
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
 import classNames from 'classnames';
+
+defineOptions({
+    name: 'XyInput',
+    inheritAttrs: false,
+})
 
 type InputSize = 'lg' | 'sm';
 

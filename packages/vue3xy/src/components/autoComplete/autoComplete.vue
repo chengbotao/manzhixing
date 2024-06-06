@@ -26,22 +26,16 @@
     </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue'
-
-export default defineComponent({
-    name: 'XyAutoComplete',
-    inheritAttrs: false
-
-})
-</script>
-
 <script setup lang="ts">
 import { ref, computed, useSlots } from "vue";
 import classNames from 'classnames';
 import { useClickOutside } from "../../hooks/useClickOutside";
 import { useDebounce } from "../../hooks/useDebounce";
 
+defineOptions({
+    name: 'XyAutoComplete',
+    inheritAttrs: false,
+})
 
 interface DataSourceObject {
     value: string;
@@ -58,11 +52,6 @@ interface AutoCompleteEmits {
     (event: "select", payload: DataSourceType): void
     (event: "update:modelValue", payload: string): void
 }
-
-// defineOptions({
-//     name: 'XyAutoComplete',
-//     inheritAttrs: false,
-// })
 
 // ref
 const xyAutoComplete = ref<HTMLDivElement>();

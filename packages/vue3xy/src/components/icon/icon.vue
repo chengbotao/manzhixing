@@ -6,23 +6,15 @@
     <FontAwesomeIcon v-bind="$attrs" :icon="icon" :class="classes"></FontAwesomeIcon>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue'
-
-export default defineComponent({
-    name: 'XyIcon',
-    inheritAttrs: false
-
-})
-
-</script>
-
 <script setup lang="ts">
 import { computed } from "vue";
 import classNames from "classnames";
 import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
-
+defineOptions({
+  name: 'XyIcon',
+  inheritAttrs: false
+})
 type ThemeProps =
     | 'primary'
     | 'secondary'
@@ -51,7 +43,7 @@ interface FontAwesomeIconProps {
   title?: string
   inverse?: boolean
 }
-interface IconProps extends Omit<FontAwesomeIconProps, "icon"> {
+interface IconProps {
     icon: object | Array<string> | string | IconDefinition
     className?: string
     theme?: ThemeProps

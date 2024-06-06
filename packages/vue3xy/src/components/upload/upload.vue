@@ -18,20 +18,15 @@
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue'
-
-export default defineComponent({
-  name: 'XyUpload',
-  inheritAttrs: false,
-})
-
-</script>
-
 <script setup lang="ts">
 import { computed, ref } from "vue";
 import classNames from "classnames";
 import axios from 'axios';
+
+defineOptions({
+    name: 'XyUpload',
+    inheritAttrs: false,
+})
 
 type UploadFileStatus = 'ready' | 'uploading' | 'success' | 'error';
 
@@ -68,11 +63,6 @@ interface UploadProps {
   multiple?: boolean;
   drag?: boolean;
 }
-
-// defineOptions({
-//     name: 'XyUpload',
-//     inheritAttrs: false,
-// })
 
 // ref
 const fileInput = ref<HTMLInputElement>()
