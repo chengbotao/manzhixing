@@ -21,7 +21,7 @@ import { computed, inject, ref, Ref } from "vue";
 import classNames from "classnames";
 
 defineOptions({
-    name: 'XyMenuItem',
+    name: 'XySubMenu',
     inheritAttrs: false,
 })
 
